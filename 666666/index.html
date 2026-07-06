@@ -90,6 +90,8 @@
         /* 各區中心網格 */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
         .card { background: #fffaf0; padding: 20px; border-radius: 15px; border-left: 5px solid #ffd3b6; box-shadow: 0 4px 6px rgba(0,0,0,0.03);}
+        .card p { margin-top: 10px; font-size: 15px; line-height: 1.8; color: #555; }
+        .card strong { color: #6d4c41; }
         
         /* 頁尾 */
         footer { background: #5d4a46; color: #fffaf0; text-align: center; padding: 40px 20px; margin-top: 50px; border-top: 6px solid #ff8b94;}
@@ -204,12 +206,48 @@
             <section>
                 <h2>🏢 臺中市居家托育服務中心資訊</h2>
                 <div class="grid">
-                    <div class="card"><h3>第一區</h3><p>中區、東區、南區、南屯區<br>電話：04-24724830</p></div>
-                    <div class="card"><h3>第二區</h3><p>西區、西屯區<br>電話：04-24527828</p></div>
-                    <div class="card"><h3>第三區</h3><p>北區、北屯區<br>電話：04-22338063</p></div>
-                    <div class="card"><h3>第四區</h3><p>沙鹿、龍井、大肚、清水、梧棲等區<br>電話：04-26368722</p></div>
-                    <div class="card"><h3>第五區</h3><p>豐原、后里、石岡、東勢等區<br>電話：04-25226618</p></div>
-                    <div class="card"><h3>第六區</h3><p>大里、太平、霧峰、烏日區<br>電話：04-24820181</p></div>
+                    <div class="card">
+                        <h3 style="color:#d63031;">第一區</h3>
+                        <p><strong>承辦單位：</strong>財團法人彭婉如文教基金會<br>
+                        <strong>負責區域：</strong>中區、東區、南區、南屯區<br>
+                        <strong>電話：</strong>04-24724830<br>
+                        <strong>地址：</strong>臺中市南屯區東興路2段98號8樓</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color:#e67e22;">第二區</h3>
+                        <p><strong>承辦單位：</strong>朝陽科技大學<br>
+                        <strong>負責區域：</strong>西區、西屯區<br>
+                        <strong>電話：</strong>04-24527828<br>
+                        <strong>地址：</strong>臺中市西屯區光明路160號2樓</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color:#f1c40f;">第三區</h3>
+                        <p><strong>承辦單位：</strong>中臺科技大學<br>
+                        <strong>負責區域：</strong>北區、北屯區<br>
+                        <strong>電話：</strong>04-22338063<br>
+                        <strong>地址：</strong>臺中市北區臺灣大道一段667號5F</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color:#27ae60;">第四區</h3>
+                        <p><strong>承辦單位：</strong>弘光科技大學<br>
+                        <strong>負責區域：</strong>沙鹿、龍井、大肚、清水、梧棲、大甲、大安、外埔區<br>
+                        <strong>電話：</strong>04-26368722<br>
+                        <strong>地址：</strong>臺中市沙鹿區福幼街8號3樓</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color:#2980b9;">第五區</h3>
+                        <p><strong>承辦單位：</strong>中臺科技大學<br>
+                        <strong>負責區域：</strong>豐原、后里、石岡、東勢、和平、新社、潭子、大雅、神岡區<br>
+                        <strong>電話：</strong>04-25226618<br>
+                        <strong>地址：</strong>臺中市豐原區西安街36號5樓</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color:#8e44ad;">第六區</h3>
+                        <p><strong>承辦單位：</strong>財團法人亞洲大學<br>
+                        <strong>負責區域：</strong>大里區、太平區、霧峰區、烏日區<br>
+                        <strong>電話：</strong>04-24820181<br>
+                        <strong>地址：</strong>臺中市大里區國光路二段500號9樓之1</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -305,7 +343,7 @@
             <!-- 繪本管理 -->
             <div class="admin-card">
                 <h3 style="color:#d63031;">📚 新增嚴選繪本推薦</h3>
-                <input type="text" id="new-book-img-link" class="admin-input" placeholder="繪本封面圖片網址 (選填)">
+                <input type="text" id="new-book-img-link" class="admin-input" placeholder="繪本封面圖片網址 (請貼上正確的圖片結尾網址，選填)">
                 <input type="text" id="new-book-title" class="admin-input" placeholder="書名 (必填)">
                 <div style="display:flex; gap:10px;">
                     <input type="text" id="new-book-author" class="admin-input" placeholder="作者">
@@ -330,7 +368,7 @@
             <!-- 育兒好康管理 -->
             <div class="admin-card">
                 <h3 style="color:#0984e3;">📢 新增育兒/臺中好康情報</h3>
-                <input type="text" id="new-goodie-title" class="admin-input" placeholder="情報標題">
+                <input type="text" id="new-goodie-title" class="admin-input" placeholder="情報標題 (例如: 臺中市托育補助加碼！)">
                 <textarea id="new-goodie-content" class="admin-input" rows="3" placeholder="情報內容或活動說明..."></textarea>
                 <input type="text" id="new-goodie-link" class="admin-input" placeholder="相關網址連結 (選填)">
                 <button class="btn" style="background:#0984e3;" onclick="addGoodie()">➕ 新增情報</button>
@@ -390,15 +428,13 @@
         const db = firebase.firestore();
 
         let faqs = [], resources = [], books = [], goodies = [];
-        let adminPassword = 'play25'; // 預設密碼
+        let adminPassword = 'play25';
 
-        // 讀取/初始化密碼設定
         db.collection("config").doc("admin_settings").onSnapshot((doc) => {
             if (doc.exists) { adminPassword = doc.data().password; } 
             else { db.collection("config").doc("admin_settings").set({ password: 'play25' }); }
         });
 
-        // 監聽資料庫
         db.collection("faqs").onSnapshot(snap => { faqs = snap.docs.map(doc => ({ id: doc.id, ...doc.data() })).sort((a, b) => a.timestamp - b.timestamp); renderFront(); renderAdmin(); });
         db.collection("resources").onSnapshot(snap => { resources = snap.docs.map(doc => ({ id: doc.id, ...doc.data() })).sort((a, b) => a.timestamp - b.timestamp); renderFront(); renderAdmin(); });
         db.collection("books").onSnapshot(snap => { books = snap.docs.map(doc => ({ id: doc.id, ...doc.data() })).sort((a, b) => b.timestamp - a.timestamp); renderFront(); renderAdmin(); });
@@ -415,7 +451,6 @@
 
         function logoutAdmin() { document.getElementById('admin-view').style.display = 'none'; document.getElementById('front-view').style.display = 'block'; }
 
-        // ================= 密碼修改邏輯 =================
         function changePassword() {
             const oldPwd = document.getElementById('setting-old-pwd').value;
             const newPwd = document.getElementById('setting-new-pwd').value;
@@ -429,7 +464,6 @@
             }).catch(e => console.error("密碼更新失敗", e));
         }
 
-        // ================= 搜尋與渲染邏輯 =================
         function handleSearch() {
             const keyword = document.getElementById('global-search').value.toLowerCase();
             renderFront(keyword);
@@ -518,7 +552,6 @@
             setTimeout(() => initAccordion(keyword.length > 0), 100);
         }
 
-        // ================= 後台列表渲染 =================
         function renderAdmin() {
             document.getElementById('admin-faq-list').innerHTML = faqs.map(f => `<div class="admin-list-item"><div><strong>${f.q}</strong></div><div class="action-buttons"><button class="btn btn-edit" style="margin:0; padding:6px 12px; font-size:14px; box-shadow:none;" onclick="openEditFaq('${f.id}')">編輯</button><button class="btn btn-danger" style="margin:0; padding:6px 12px; font-size:14px; box-shadow:none;" onclick="deleteDoc('faqs','${f.id}')">刪除</button></div></div>`).join('');
             document.getElementById('admin-res-list').innerHTML = resources.map(r => `<div class="admin-list-item"><div><strong>${r.name}</strong></div><div class="action-buttons"><button class="btn btn-edit" style="margin:0; padding:6px 12px; font-size:14px; box-shadow:none;" onclick="openEditResource('${r.id}')">編輯</button><button class="btn btn-danger" style="margin:0; padding:6px 12px; font-size:14px; box-shadow:none;" onclick="deleteDoc('resources','${r.id}')">刪除</button></div></div>`).join('');
@@ -547,7 +580,6 @@
             `).join('');
         }
 
-        // ================= 新增資料邏輯 =================
         function addFaq() {
             const q = document.getElementById('new-faq-q').value, a = document.getElementById('new-faq-a').value;
             if(!q || !a) return alert('請填寫完整問題與答案！');
@@ -571,18 +603,17 @@
             if(!title) return alert('請填寫書名！');
 
             db.collection("books").add({
-                title: title, author: document.getElementById('new-book-author').value,
+                title: title, imageUrl: document.getElementById('new-book-img-link').value, author: document.getElementById('new-book-author').value,
                 illustrator: document.getElementById('new-book-illustrator').value, translator: document.getElementById('new-book-translator').value,
                 publisher: document.getElementById('new-book-publisher').value, age: document.getElementById('new-book-age').value,
                 category: document.getElementById('new-book-category').value, outline: document.getElementById('new-book-outline').value,
-                imageUrl: document.getElementById('new-book-img-link').value, timestamp: Date.now()
+                timestamp: Date.now()
             }).then(() => {
                 document.querySelectorAll('#admin-view .admin-card:nth-child(1) .admin-input').forEach(el => el.value = '');
                 alert('繪本新增成功！');
             });
         }
 
-        // ================= 編輯與刪除 =================
         function hideAllEditInputs() {
             document.getElementById('edit-faq-inputs').style.display = 'none';
             document.getElementById('edit-res-inputs').style.display = 'none';
